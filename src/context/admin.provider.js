@@ -4,9 +4,17 @@ import React, { useContext, useEffect, useState, createContext } from 'react';
 export const AdminContext = createContext({
     category: [],
     id: [],
-    name: ''
-
+    name: '',
+    massage: ''
 })
+
+
+const MassageProvider = ({ children }) => {
+    const [sucsees, setSuccess] = useState('Thanks for you add');
+    const [faild, setFaild] = useState("Something Wrong");
+
+}
+
 
 
 const AdminProvier = ({ children }) => {
@@ -24,3 +32,5 @@ return (
     </AdminContext.Provider>
 )
 
+
+export default AdminProvier;
