@@ -65,6 +65,7 @@ export default function TableList() {
     name: "",
     id: "",
     category: ""
+
   })
 
   const handelOnChange = event => {
