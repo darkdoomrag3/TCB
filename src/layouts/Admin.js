@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
@@ -17,6 +17,8 @@ import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/logo.png";
+import { userService } from '../services/user.service'
+
 
 let ps;
 
@@ -46,6 +48,17 @@ export default function Admin({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
+
+
+  /// for get all users list 
+  // const [users, setUsers] = useState(null)
+  // useEffect(() => {
+  //   userService.getAll().then(users => setUsers({ users }))
+
+
+  // }, [users])
+
+
   const [image, setImage] = React.useState(bgImage);
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");

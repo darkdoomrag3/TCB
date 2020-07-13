@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.0",
     "chartist": "0.10.1",
     "classnames": "2.2.6",
+    "formik": "^2.1.4",
     "history": "4.10.1",
     "perfect-scrollbar": "1.5.0",
     "prop-types": "15.7.2",
@@ -21,7 +22,8 @@
     "react-google-maps": "9.4.5",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "react-swipeable-views": "0.13.9"
+    "react-swipeable-views": "0.13.9",
+    "yup": "^0.29.1"
   },
   "scripts": {
     "start": "react-scripts start",

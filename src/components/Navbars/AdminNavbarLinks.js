@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
+import { Route, Redirect, Link, Router } from 'react-router-dom';
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -20,6 +22,10 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
+import { history } from '../../helpers/history'
+import { authenticationService } from '../../services/authentication.service'
+import { Role } from '../../helpers/role'
+import { LoginPage } from "loginPage/LoginPage";
 
 const useStyles = makeStyles(styles);
 
@@ -47,6 +53,24 @@ export default function AdminNavbarLinks() {
   const handleCloseProfile = () => {
     setOpenProfile(null);
   };
+
+  const logout = () => {
+    authenticationService.logout();
+    history.push('/login');
+  }
+
+
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    authenticationService.currentUser.subscribe(x => setCurrentUser({
+      currentUser: x,
+      isAdmin: x && x.role === Role.Admin
+    }));
+  }, [])
+
+
   return (
     <div>
       <div className={classes.searchWrapper}>
@@ -191,29 +215,44 @@ export default function AdminNavbarLinks() {
               }}
             >
               <Paper>
+
+
                 <ClickAwayListener onClickAway={handleCloseProfile}>
                   <MenuList role="menu">
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
-                      Profile
+
+                    <Router history={history}>
+
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={classes.dropdownItem}
+                      >
+                        Profile
                     </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
-                      Settings
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={classes.dropdownItem}
+                      >
+                        Settings
                     </MenuItem>
-                    <Divider light />
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={classes.dropdownItem}
-                    >
-                      Logout
-                    </MenuItem>
+                      <Divider light />
+
+                      {currentUser &&
+                        <MenuItem
+                          onClick={handleCloseProfile}
+                          className={classes.dropdownItem}
+
+
+                        >
+
+                          <a onClick={logout} className="nav-item nav-link">Logout</a>
+
+                        </MenuItem>
+                      }
+                    </Router>
+
                   </MenuList>
                 </ClickAwayListener>
+
               </Paper>
             </Grow>
           )}
