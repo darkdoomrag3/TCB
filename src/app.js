@@ -7,6 +7,7 @@ import { PrivateRoute } from "./private-route";
 import Admin from "./layouts/Admin";
 import { HomePage } from "HomePage/HomePage";
 import { LoginPage } from "loginPage/LoginPage";
+import PublicNavbar from "publicIndex/PublicNavbar/PublicNavbar";
 
 
 export default function App() {
@@ -47,7 +48,7 @@ export default function App() {
         )}
         <PrivateRoute exact path="/" component={HomePage} />
         <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
-        <Route path="/login" component={LoginPage} />
+        <Route path="/login" component={PublicNavbar} />
       </div>
     </Router>
   );
