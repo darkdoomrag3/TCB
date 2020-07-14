@@ -8,40 +8,23 @@ import Admin from "./layouts/Admin";
 import { HomePage } from "HomePage/HomePage";
 import { LoginPage } from "loginPage/LoginPage";
 
-//class App extends React.Component {
+
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  const [isAdmin, setisAdmin] = useState(null);
-  //   constructor(props) {
-  //     super(props);
+  const [isAdmin, setisAdmin] = useState(false);
 
-  //     this.state = {
-  //       currentUser: null,
-  //       isAdmin: false,
-  //     };
-  //   }
-
-  //   componentDidMount() {
-  //     authenticationService.currentUser.subscribe((x) =>
-  //       this.setState({
-  //         currentUser: x,
-  //         isAdmin: x && x.role === Role.Admin,
-  //       })
-  //     );
-  //   }
   useEffect(() => {
     authenticationService.currentUser.subscribe((x) => {
       setCurrentUser(x);
       setisAdmin(x && x.role === Role.Admin);
     });
-  });
+  }, []);
 
   const logout = () => {
     authenticationService.logout();
     history.push("/login");
   };
-  //render() {
-  //const { currentUser, isAdmin } = this.state;
+
   return (
     <Router history={history}>
       <div>
@@ -69,6 +52,6 @@ export default function App() {
     </Router>
   );
 }
-//}
+
 
 export { App };

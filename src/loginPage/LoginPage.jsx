@@ -3,23 +3,13 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { authenticationService } from "../services/authentication.service";
 
-//class LoginPage extends React.Component {
 function LoginPage(props) {
-  // constructor(props) {
-  //   super(props);
-  //   // redirect to home if already logged in
-  //   if (authenticationService.currentUserValue) {
-  //     this.props.history.push("/");
-  //   }
-  // }
   useEffect(() => {
-    // redirect to home if already logged in
     if (authenticationService.currentUserValue) {
       props.history.push("/");
     }
-  });
+  }, []);
 
-  //render() {
   return (
     <div>
       <div className="alert alert-info">
@@ -105,5 +95,5 @@ function LoginPage(props) {
     </div>
   );
 }
-//}
+
 export { LoginPage };
