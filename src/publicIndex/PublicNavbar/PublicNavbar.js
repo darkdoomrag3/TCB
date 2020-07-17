@@ -1,23 +1,25 @@
-
-import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
-import InputBase from '@material-ui/core/InputBase';
-import { withStyles } from '@material-ui/core/styles';
+import React, { Component } from "react";
+import { AppBar, Grid, withStyles, Paper } from "@material-ui/core";
+import Box  from "@material-ui/core/Box";
+import Logo from '../../assets/tcb.png';
+import Search from './Search';
+import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import './publicnavbar.scss';
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import ShopingCart from 'publicIndex/ShoppingIcon/ShopingCart';
 import Badge from '@material-ui/core/Badge';
-import MailIcon from '@material-ui/icons/Mail';
-import Container from '@material-ui/core/Container';
-
-
+import NotificationsActiveOutlinedIcon from '@material-ui/icons/NotificationsActiveOutlined';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import Favoriate from '@material-ui/icons/FavoriteBorderOutlined';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: '2px 4px',
+        display: 'flex',
+        alignItems: 'center',
+        width: "100%",
+      },
     grow: {
         flexGrow: 1,
     },
@@ -30,44 +32,8 @@ const useStyles = makeStyles((theme) => ({
             display: 'block',
         },
     },
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginRight: theme.spacing(2),
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(3),
-            width: 'auto',
-        },
-    },
-    searchIcon: {
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderBlockColor: 'red',
-        borderColor: 'red'
-    },
-    inputRoot: {
-        color: 'inherit',
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '60ch',
-        },
+    image:{
+        textAlign: 'center',
     },
     sectionDesktop: {
         display: 'none',
@@ -81,6 +47,28 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+
+        [theme.breakpoints.up('sm')]: {
+            width: '60ch',
+        },
+    },
+    container: {
+    display: "flex"
+  },
+  paper: {
+    height: 200,
+    flex: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 8
+  }
 }));
 
 const StyledBadge = withStyles((theme) => ({
@@ -94,99 +82,77 @@ const StyledBadge = withStyles((theme) => ({
     },
 }))(Badge);
 
+// {/* <Grid item xs={3} >
+// <IconButton aria-label="cart">
+//     <StyledBadge badgeContent={4} color="secondary">
+//         <BusinessCenterIcon />
+//     </StyledBadge>
+// </IconButton>
+// </Grid> */}
 
-{/* <Grid item xs={3} >
-<IconButton aria-label="cart">
-    <StyledBadge badgeContent={4} color="secondary">
-        <BusinessCenterIcon />
-    </StyledBadge>
-</IconButton>
-</Grid> */}
-
-
-
-const PublicNavbar = () => {
-    const classes = useStyles();
-
+export default function PublicNavbar() {
+    const classes  = useStyles();
     return (
-        <div className='nav-header'>
-            <div className={classes.root}>
-                <Grid container spacing={3}>
+        <div className="nav-header">
+        <div className={classes.root}>
+        <Grid container spacing={2} justify="flex-start">
+          <Grid item xs={6} sm={6} md={2} lg={2} className={classes.image}>
+              <img src={Logo} alt="logo" ></img>
+          </Grid>
+          <Box clone order={{ xs: 3, sm: 3, md:2, lg: 2 }}>
+            <Grid item xs={12} sm={12} md={6} lg={6} container justify="center"
+                         alignItems="center">
+                <Search />
+            </Grid>
+          </Box>
+          <Box clone order={{ xs: 2, sm: 2, md:3, lg: 2}}>
+            <Grid item xs={6} sm={6} md={4} lg={4} container
+                         direction="row-reverse"
+                        justify="center"
+                         alignItems="center">
+                        <Grid item xs={3} md={3}>
+                             <IconButton aria-label="cart">
+                                <StyledBadge badgeContent={0} color="secondary">
+                                 <ShoppingCartOutlinedIcon />
+                                 </StyledBadge>
+                             </IconButton>
+                             <Hidden only mdDown><p>Shopping cart</p></Hidden>
+                         </Grid>
 
-                    <Grid item xs={6} sm={3}>
-                        <Paper className={classes.paper}>xs=6 sm=3</Paper>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6}>
-                        <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </Grid>
-
-
-
-
-                    <Grid item xs={3} sm={3} container
-                        direction="row-reverse"
-                        justify="flex-start"
-                        alignItems="flex-start">
-                        <Grid item xs={3} >
+                        <Grid item xs={3} md={3}>
                             <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={4} color="secondary">
-                                    <BusinessCenterIcon />
-                                </StyledBadge>
-                            </IconButton>
+                                 <StyledBadge badgeContent={0} color="secondary">
+                                     <Favoriate />
+                                 </StyledBadge>
+                             </IconButton>
+                             <Hidden only mdDown><p>Favorites</p></Hidden>
+                         </Grid>
+
+                         <Grid item xs={3} md={3}>
+                             <IconButton aria-label="cart">
+                                 <StyledBadge badgeContent={0} color="secondary">
+                                     <PersonOutlineOutlinedIcon />
+                                 </StyledBadge>
+                             </IconButton>
+                             <Hidden only mdDown><p>Enter</p></Hidden>
+                         </Grid>
+
+                         <Grid item xs={3} md={3}>
+                             <IconButton aria-label="cart">
+                                 <StyledBadge badgeContent={0} color="secondary">
+                                 <NotificationsActiveOutlinedIcon />
+                                 </StyledBadge>
+                             </IconButton>
+                             <Hidden only mdDown><p>Notifications</p></Hidden>
+                         </Grid>         
 
 
-                        </Grid>
-
-                        <Grid item xs={3} >
-                            <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={4} color="secondary">
-                                    <BusinessCenterIcon />
-                                </StyledBadge>
-                            </IconButton>
-
-
-                        </Grid>
-
-
-                        <Grid item xs={3} >
-                            <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={4} color="secondary">
-                                    <BusinessCenterIcon />
-                                </StyledBadge>
-                            </IconButton>
-
-
-                        </Grid>
-
-                        <Grid item xs={3} >
-                            <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={4} color="secondary">
-                                    <BusinessCenterIcon />
-                                </StyledBadge>
-                            </IconButton>
-
-
-                        </Grid>
-
-
-                    </Grid>
-
-
-                </Grid>
-            </div>
-
-
-
-        </div>
+            </Grid>
+          </Box>
+        </Grid>
+      </div>
+      </div>
     );
-}
+  }
 
-export default PublicNavbar
+
