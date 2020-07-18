@@ -5,10 +5,11 @@ import { history } from "./helpers/history";
 import { authenticationService } from "./services/authentication.service";
 import { PrivateRoute } from "./private-route";
 import Admin from "./layouts/Admin";
+import User from "./layouts/User";
 import { HomePage } from "HomePage/HomePage";
 import { LoginPage } from "loginPage/LoginPage";
 import PublicNavbar from "publicIndex/PublicNavbar/PublicNavbar";
-
+import PublicCategory from "publicIndex/PublicCategory/publicCategory";
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -46,9 +47,13 @@ export default function App() {
             </div>
           </nav>
         )}
+        {/* <PublicNavbar/>
+        <PublicCategory/> */}
         <PrivateRoute exact path="/" component={HomePage} />
         <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
-        <Route path="/login" component={PublicNavbar} />
+        <Route path="/login" component={PublicNavbar} />        
+        <Route path="/login" component={PublicCategory} />        
+        <Route path="/user" component={User} />        
       </div>
     </Router>
   );
