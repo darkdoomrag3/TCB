@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { AppBar, Grid, withStyles, Paper } from "@material-ui/core";
 import Box  from "@material-ui/core/Box";
 import Logo from '../../assets/tcb.png';
@@ -95,7 +95,7 @@ export default function PublicNavbar() {
     return (
         <div className="nav-header">
         <div className={classes.root}>
-        <Grid container spacing={2} justify="flex-start">
+        <Grid container spacing={2} justify="center">
           <Grid item xs={6} sm={6} md={2} lg={2} className={classes.image}>
               <img src={Logo} alt="logo" ></img>
           </Grid>
