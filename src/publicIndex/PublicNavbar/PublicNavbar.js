@@ -12,7 +12,7 @@ import NotificationsActiveOutlinedIcon from '@material-ui/icons/NotificationsAct
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import Favoriate from '@material-ui/icons/FavoriteBorderOutlined';
 import Hidden from '@material-ui/core/Hidden';
-
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '2px 4px',
@@ -68,7 +68,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     elevation: 8
-  }
+  },
+  font:{
+    fontFamily: "'Almarai', sans-serif",
+  },
 }));
 
 const StyledBadge = withStyles((theme) => ({
@@ -95,7 +98,7 @@ export default function PublicNavbar() {
     return (
         <div className="nav-header">
         <div className={classes.root}>
-        <Grid container spacing={2} justify="center">
+        <Grid container spacing={0} justify="center">
           <Grid item xs={6} sm={6} md={2} lg={2} className={classes.image}>
               <img src={Logo} alt="logo" ></img>
           </Grid>
@@ -110,42 +113,41 @@ export default function PublicNavbar() {
                          direction="row-reverse"
                         justify="center"
                          alignItems="center">
-                        <Grid item xs={3} md={3}>
+                        <Grid item xs={3} sm={2} md={3} className={classes.font}>
                              <IconButton aria-label="cart">
                                 <StyledBadge badgeContent={0} color="secondary">
                                  <ShoppingCartOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>Shopping cart</p></Hidden>
+                             <Hidden only mdDown><p>سبد خرید</p></Hidden>
                          </Grid>
 
-                        <Grid item xs={3} md={3}>
+                        <Grid item xs={3} sm={2} md={3} className={classes.font}>
                             <IconButton aria-label="cart">
                                  <StyledBadge badgeContent={0} color="secondary">
                                      <Favoriate />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>Favorites</p></Hidden>
+                             <Hidden only mdDown><p>موردعلاقه ها</p></Hidden>
                          </Grid>
 
-                         <Grid item xs={3} md={3}>
-                             <IconButton aria-label="cart">
+                         <Grid item xs={3} sm={2} md={3} className={classes.font}>
+                             <Link to="user"><IconButton aria-label="cart">
                                  <StyledBadge badgeContent={0} color="secondary">
                                      <PersonOutlineOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>Enter</p></Hidden>
+                             <Hidden only mdDown><p>ورود</p></Hidden></Link>
                          </Grid>
 
-                         <Grid item xs={3} md={3}>
+                         <Grid item xs={3} sm={2} md={3} className={classes.font}>
                              <IconButton aria-label="cart">
                                  <StyledBadge badgeContent={0} color="secondary">
                                  <NotificationsActiveOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>Notifications</p></Hidden>
+                             <Hidden only mdDown><p>اطلاعیه ها</p></Hidden>
                          </Grid>         
-
 
             </Grid>
           </Box>

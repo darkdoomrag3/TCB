@@ -25,7 +25,11 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
     },
     appbarStyle:{
-        backgroundColor:'#fff'
+        backgroundColor:'#fff',
+    },
+    font:{
+      fontFamily:"'Almarai', sans-serif",
+
     }
   }));
 
@@ -44,22 +48,37 @@ export default function PublicCategory() {
 
   return (
     <div className={classes.root}>
-    <AppBar position="static" className={classes.appbarStyle}>
+    <AppBar elevation={0} position="static" className={classes.appbarStyle}>
         <Toolbar>
-      <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-        <MenuOutlinedIcon /><Hidden only smDown> All categories</Hidden>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+      <MenuOutlinedIcon />
       </Button>
-      <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>category1</Hidden>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>گالری</Hidden>
+      </Button>  
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>کاتالوگ</Hidden>
+      </Button>      
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>مقالات</Hidden>
+      </Button>      
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>اطلاعات فنی</Hidden>
+      </Button>      
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>قطعات خودرو</Hidden>
       </Button>
-      <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>category2</Hidden>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>تماس با ما</Hidden>
       </Button>
-      <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>category3</Hidden>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>درباره ما</Hidden>
       </Button>
-      <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>category4</Hidden>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>فروشگاه</Hidden>
+      </Button>
+      <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
+        <Hidden only smDown>صفحه اصلی</Hidden>
       </Button>
 </Toolbar>
 </AppBar>
@@ -69,10 +88,18 @@ export default function PublicCategory() {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}>
-        <MenuItem onClick={handleClose}><ClassOutlinedIcon/>category1</MenuItem>
-        <MenuItem onClick={handleClose}><ClassOutlinedIcon/>category2</MenuItem>
-        <MenuItem onClick={handleClose}><ClassOutlinedIcon/>category3</MenuItem>
-        <MenuItem onClick={handleClose}><ClassOutlinedIcon/>category4</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>صفحه اصلی</MenuItem>
+        <MenuItem onClick={handleClose}         className={classes.font}
+><ClassOutlinedIcon/>فروشگاه</MenuItem>
+        <MenuItem onClick={handleClose}         className={classes.font}
+><ClassOutlinedIcon/>درباره ما</MenuItem>
+        <MenuItem onClick={handleClose}         className={classes.font}
+><ClassOutlinedIcon/>تماس با ما</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>قطعلا خودرو</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>اطلاعات فنی</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>مقالات</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>کاتالوگ</MenuItem>
+        <MenuItem onClick={handleClose} className={classes.font}><ClassOutlinedIcon/>گالری</MenuItem>
       </Menu>
     </div>
   );
