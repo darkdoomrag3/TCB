@@ -4,15 +4,10 @@ import Box  from "@material-ui/core/Box";
 import Logo from '../../assets/tcb.png';
 import Search from './Search';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import './publicnavbar.scss';
-import Badge from '@material-ui/core/Badge';
-import NotificationsActiveOutlinedIcon from '@material-ui/icons/NotificationsActiveOutlined';
-import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
-import Favoriate from '@material-ui/icons/FavoriteBorderOutlined';
-import Hidden from '@material-ui/core/Hidden';
-import {Link} from 'react-router-dom'
+import IndexIconMenu from "./IndexIconMenu";
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '2px 4px',
@@ -74,16 +69,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const StyledBadge = withStyles((theme) => ({
-    badge: {
-        right: -3,
-        top: 13,
-        border: `2px solid ${theme.palette.background.paper}`,
-        padding: '0 4px',
-
-
-    },
-}))(Badge);
 
 // {/* <Grid item xs={3} >
 // <IconButton aria-label="cart">
@@ -102,56 +87,21 @@ export default function PublicNavbar() {
           <Grid item xs={6} sm={6} md={2} lg={2} className={classes.image}>
               <img src={Logo} alt="logo" ></img>
           </Grid>
-          <Box clone order={{ xs: 3, sm: 3, md:2, lg: 2 }}>
+          <Box clone order={{ xs: 3, sm: 3, md: 2, lg: 2 }}>
             <Grid item xs={12} sm={12} md={6} lg={6} container justify="center"
                          alignItems="center">
                 <Search />
             </Grid>
           </Box>
-          <Box clone order={{ xs: 2, sm: 2, md:3, lg: 2}}>
-            <Grid item xs={6} sm={6} md={4} lg={4} container
+          <Box clone order={{ xs: 2, sm: 2, md: 3, lg: 3 }}>
+          <Grid item xs={6} sm={6} md={4} lg={4} container
                          direction="row-reverse"
                         justify="center"
                          alignItems="center">
-                        <Grid item xs={3} sm={2} md={3} className={classes.font}>
-                             <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={0} color="secondary">
-                                 <ShoppingCartOutlinedIcon />
-                                 </StyledBadge>
-                             </IconButton>
-                             <Hidden only mdDown><p>سبد خرید</p></Hidden>
+                         <IndexIconMenu/>
                          </Grid>
-
-                        <Grid item xs={3} sm={2} md={3} className={classes.font}>
-                            <IconButton aria-label="cart">
-                                 <StyledBadge badgeContent={0} color="secondary">
-                                     <Favoriate />
-                                 </StyledBadge>
-                             </IconButton>
-                             <Hidden only mdDown><p>موردعلاقه ها</p></Hidden>
-                         </Grid>
-
-                         <Grid item xs={3} sm={2} md={3} className={classes.font}>
-                             <Link to="user"><IconButton aria-label="cart">
-                                 <StyledBadge badgeContent={0} color="secondary">
-                                     <PersonOutlineOutlinedIcon />
-                                 </StyledBadge>
-                             </IconButton>
-                             <Hidden only mdDown><p>ورود</p></Hidden></Link>
-                         </Grid>
-
-                         <Grid item xs={3} sm={2} md={3} className={classes.font}>
-                             <IconButton aria-label="cart">
-                                 <StyledBadge badgeContent={0} color="secondary">
-                                 <NotificationsActiveOutlinedIcon />
-                                 </StyledBadge>
-                             </IconButton>
-                             <Hidden only mdDown><p>اطلاعیه ها</p></Hidden>
-                         </Grid>         
-
-            </Grid>
-          </Box>
-        </Grid>
+            </Box>
+        </Grid> 
       </div>
       </div>
     );
