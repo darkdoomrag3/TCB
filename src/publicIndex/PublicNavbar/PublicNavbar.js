@@ -83,7 +83,12 @@ export default function PublicNavbar() {
     return (
         <div className="nav-header">
         <div className={classes.root}>
-        <Grid container spacing={0} justify="center">
+        <Grid
+  container
+  direction="row"
+  justify="center"
+  alignItems="center"
+>
           <Grid item xs={6} sm={6} md={2} lg={2} className={classes.image}>
               <img src={Logo} alt="logo" ></img>
           </Grid>
