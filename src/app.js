@@ -10,7 +10,16 @@ import { HomePage } from "HomePage/HomePage";
 import { LoginPage } from "loginPage/LoginPage";
 import PublicNavbar from "publicIndex/PublicNavbar/PublicNavbar";
 import PublicCategory from "publicIndex/PublicCategory/publicCategory";
-
+import MainCategory from "components/Category/mainCategory";
+import BannerCarosel from "components/Category/bannerCarosel";
+import TodayOfferCarosel from "components/Category/TodaysOfferCarosel";
+import DealOfTheWeekCarosel from "components/Category/DealOfTheWeekCarosel";
+import Footer from "components/Footer/Footer";
+import FanOfSth from "components/Category/FanOfSth";
+import BestProductForYou from "components/Category/BestProductForYou";
+import PopularCategory from "components/Category/PopularCategory";
+import DiffrentCountries from "components/Category/DiffrentCountries";
+import Expanding from "components/Category/Expanding";
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isAdmin, setisAdmin] = useState(false);
@@ -47,13 +56,23 @@ export default function App() {
             </div>
           </nav>
         )}
-        {/* <PublicNavbar/>
-        <PublicCategory/> */}
+        <PublicNavbar/>
+        <PublicCategory/>
+        <BannerCarosel/>
+        <TodayOfferCarosel/>
+        <DealOfTheWeekCarosel/>
+        <MainCategory/>
+        <FanOfSth/>
+        <BestProductForYou/>
+        <PopularCategory/>
+        <DiffrentCountries/>
+        <Expanding/>
+        <Footer/>
         <PrivateRoute exact path="/" component={HomePage} />
         <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
-        <Route path="/login" component={PublicNavbar} />        
-        <Route path="/login" component={PublicCategory} />        
-        <Route path="/user" component={User} />        
+        <Route path="/login" component={PublicNavbar} />
+        <Route path="/login" component={PublicCategory} />
+        <Route path="/user" component={User} />
       </div>
     </Router>
   );

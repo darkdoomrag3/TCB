@@ -20,10 +20,12 @@
     "react-bootstrap": "^1.0.1",
     "react-chartist": "0.14.3",
     "react-dom": "16.13.1",
+    "react-elastic-carousel": "^0.6.4",
     "react-google-maps": "9.4.5",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
     "react-swipeable-views": "0.13.9",
+    "styled-components": "^5.1.1",
     "yup": "^0.29.1"
   },
   "scripts": {
