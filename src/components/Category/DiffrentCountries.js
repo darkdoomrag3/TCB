@@ -4,7 +4,6 @@ import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles";
-
 const useStyles = makeStyles((theme) => ({
   root:{margin:15},
     bgRed:{background:"red"},
@@ -23,9 +22,39 @@ export default function DiffrentCountries() {
           alignItems="center"
           className={classes.root}
         >  
-          <Grid item md={4}><Card className={classes.bgRed}><CardContent><Typography><p>Hello</p><p>Diffrent Countries</p>around the world<p></p></Typography></CardContent></Card></Grid>     
-          <Grid item md={4}><Card className={classes.bgGreen}><CardContent><Typography><p>Hello</p><p>Diffrent Countries</p>around the world<p></p></Typography></CardContent></Card></Grid>     
-          <Grid item md={4}><Card className={classes.bgYellow}><CardContent><Typography><p>Hello</p><p>Diffrent Countries</p>around the world<p></p></Typography></CardContent></Card></Grid>     
+          <Grid item sm={4} md={4}>
+            <Card className={classes.bgRed}>
+              <CardContent>
+                <Typography>
+                  <p>Hello</p>
+                  <p>Diffrent Countries</p>
+                  <p>around the world</p>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={4} md={4}>
+            <Card className={classes.bgGreen}>
+              <CardContent>
+                <Typography>
+                  <p>Hello</p>
+                  <p>Diffrent Countries</p>
+                  <p>around the world</p>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={4} md={4}>
+            <Card className={classes.bgYellow}>
+              <CardContent>
+                <Typography>
+                  <p>Hello</p>
+                  <p>Diffrent Countries</p>
+                  <p>around the world</p>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
       </Grid>
       </div>
     )

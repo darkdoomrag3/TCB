@@ -70,7 +70,8 @@ export default function PopularCategory() {
                 />
               </Item>
             </Grid>
-            <Grid item xs="auto" sm="auto">
+            <Hidden only smDown>
+              <Grid item xs="auto" sm="auto" md="auto">
               <Item style={{ width: 100, height: 100 }}>
                 <CardMedia
                   className={classes.grid}
@@ -80,6 +81,7 @@ export default function PopularCategory() {
                 />
               </Item>
             </Grid>
+            </Hidden>
           </Grid>
           <Grid
             container
@@ -124,7 +126,8 @@ export default function PopularCategory() {
                 />
               </Item>
             </Grid>
-            <Grid item xs="auto" sm="auto">
+            <Hidden only smDown>
+              <Grid item xs="auto" sm="auto" md="auto">
               <Item style={{ width: 100, height: 100 }}>
                 <CardMedia
                   className={classes.grid}
@@ -134,6 +137,7 @@ export default function PopularCategory() {
                 />
               </Item>
             </Grid>
+            </Hidden>
           </Grid>
         </Grid>
       </Grid>
