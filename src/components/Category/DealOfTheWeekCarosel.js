@@ -4,6 +4,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import { Link } from "react-router-dom";
+import Card from "@material-ui/core/Card";
+import { CardContent, Typography } from "@material-ui/core";
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -27,45 +29,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function DealOfTheWeekCarosel() {
   const classes = useStyles();
-
   return (
     <React.Fragment>
       <div className={classes.root}>
+      <p className={classes.typography} style={{textAlign:"center", fontWeight: 500}}>معاملات این هفته</p>
         <Carousel breakPoints={breakPoints}>
-          <Item>
-              <CardMedia
-                component="img"
-                image=""
-                alt=""
-              />
+          <Item style={{  borderRadius:25, height:250 ,backgroundColor: "rgb(255, 189, 193)"}}>
+
           </Item>
-          <Item>
-              <CardMedia
-                component="img"
-                image=""
-                alt=""
-              />
+          <Item style={{ borderRadius:25,  height:250 ,backgroundColor: "rgb(87, 209, 201)"}}>
+
           </Item>
-          <Item>
-              <CardMedia
-                component="img"
-                image=""
-                alt=""
-              />
+          <Item style={{ borderRadius:25, height:250 ,backgroundColor: "rgb(253, 255, 158)"}}>
+              
           </Item>
-          <Item>
-            <CardMedia
-              component="img"
-              image=""
-              alt=""
-            />
+          <Item style={{ borderRadius:25, height:250 ,backgroundColor: "rgb(122, 177, 255)"}}>
+            
           </Item>
-          <Item>
-            <CardMedia
-              component="img"
-              image=""
-              alt=""
-            />
+          <Item style={{ borderRadius:25, height:250 ,backgroundColor: "rgb(196, 162, 205)"}}>
+
           </Item>
         </Carousel>
       </div>

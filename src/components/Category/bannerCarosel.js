@@ -35,14 +35,21 @@ export default function BannerCarosel() {
           <Item>
             <CardMedia 
               component="img"
-              image=""
+              image="http://tcb-co.com/images/slider-22jpg.jpg"
               alt=""
             />
           </Item>
           <Item>
             <CardMedia
               component="img"
-              image=""
+              image="http://tcb-co.com/images/windenergy_2016_16_9-schaeffler-20160929-01_rwd_1200.jpg"
+              alt=""
+            />
+          </Item>
+          <Item>
+            <CardMedia
+              component="img"
+              image="http://www.tcb-co.com/images/slider-2.jpg"
               alt=""
             />
           </Item>
