@@ -16,7 +16,8 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 import StarRateRoundedIcon from '@material-ui/icons/StarRateRounded';
 import { CardContent, Typography } from "@material-ui/core";
-
+import { sizing } from '@material-ui/system';
+import Box from "@material-ui/core/Box"
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -62,24 +63,34 @@ export default function MainCategory() {
     <div>
       <Grid container spacing={3} className={classes.root}>
         <Grid item xs={6} sm={4}>
-          <Item style={{minHeight:"auto",borderRadius: 15 ,backgroundColor: "rgb(209, 198, 235)"}}>
+          <Item style={{borderRadius: 15 ,backgroundColor: "rgb(209, 198, 235)"}}>
 
           </Item>
         </Grid>
 
         <Grid item xs={4} sm={6}>
-        <div style={{display: "flex", alignItems: "baseline"}}>
-          <div className="row" >
-          {/* <div className={classes.typography} style={{fontWeight: 500, display: "flex"}}>
-            <p>محصولات جذاب</p> */}
-            <div justifyContent="flex-end" style={{textAlign: "right"}}>
-              <p className={classes.typography} style={{fontWeight: 500}}>همه</p>
+        <div className="MuiGrid-root MuiGrid-container" style={{marginBottom: 10}}>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+            <a className={classes.typography} style={{marginLeft: 10,fontWeight: 500 }}
+            href="#">محصولات جذاب</a>
+            </div>
+            <div className="MuiGrid-root MuiGrid-item">
+              <a className={classes.typography} style={{marginLeft: 10,fontWeight: 500}} 
+              href="#">همه
               <ArrowForwardIosOutlinedIcon />
-          </div>   
-          {/* </div> */}
-           
-        </div>
-          </div>
+              </a>
+              </div>
+              </div>
+        {/* <div>
+          <div display="flex" justifyContent="flex-start" className="row" >
+          <a >
+           </a>
+            <div>
+              <a className={classes.typography} style={{fontWeight: 500}}>همه
+              </a>
+            </div>
+          </div>           
+        </div> */}
         <Grid container
         spacing={2}
             direction="row"
@@ -87,7 +98,7 @@ export default function MainCategory() {
           alignItems="center" breakPoints={breakPoints}>
           <Grid item xs={12} sm={6} md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 component="img"
                 image="http://tcb-co.com/images/stories/virtuemart/product/resized/%D8%A7%D9%88%D8%B1%DB%8C%D9%86%DA%AF%20%D8%B3%D9%88%D8%B2%D9%86%20%D8%A7%D9%86%DA%98%DA%A9%D8%AA%D9%88%D8%B1%20%D8%B2%D9%85%D8%B1%D8%AF%DB%8C%D8%AF%DA%A9%20%D9%85%D8%AF%D9%84%20s992_128%20%D9%85%D9%86%D8%A7%D8%B3%D8%A8%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%BE%D8%B1%D8%A7%DB%8C%D8%AF%20_0x500.jpg"
@@ -115,7 +126,7 @@ export default function MainCategory() {
             </Grid>
           <Hidden only xsDown ><Grid item sm={6} md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
               className={classes.imageStyle}
                 component="img"
@@ -146,7 +157,7 @@ export default function MainCategory() {
             </Grid></Hidden>
           <Hidden only smDown ><Grid item md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 component="img"
                 image="http://tcb-co.com/images/stories/virtuemart/product/resized/%DA%A9%D8%A7%D8%B3%D9%87%20%D9%86%D9%85%D8%AF%20%D8%B4%D9%81%D8%AA%20%D9%88%D8%B1%D9%88%D8%AF%DB%8C%20%D9%85%D8%AF%D9%84%20LF481Q1-1701030A1%20%D9%85%D9%86%D8%A7%D8%B3%D8%A8%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C%20%D9%84%DB%8C%D9%81%D8%A7%D9%86%20_0x500.jpg"
@@ -182,7 +193,7 @@ export default function MainCategory() {
           alignItems="center" breakPoints={breakPoints}>
           <Grid item xs={12} sm={6} md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 component="img"
                 image="http://tcb-co.com/images/stories/virtuemart/product/resized/%D9%85%DA%A9%D9%85%D9%84%20%D8%B3%D9%88%D8%AE%D8%AA%20%D8%AE%D9%88%D8%AF%D8%B1%D9%88%20%D9%84%DB%8C%DA%A9%D9%88%D9%85%D9%88%D9%84%DB%8C%20%D9%85%D8%AF%D9%84%20Speed%20TEC%20Petrol%20%D8%AD%D8%AC%D9%85%20250%20%D9%85%DB%8C%D9%84%DB%8C%20%D9%84%DB%8C%D8%AA%D8%B1%20_0x500.jpg"
@@ -210,7 +221,7 @@ export default function MainCategory() {
             </Grid>
           <Hidden only xsDown ><Grid item sm={6} md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
               className={classes.imageStyle}
                 component="img"
@@ -240,7 +251,7 @@ export default function MainCategory() {
             </Grid></Hidden>
           <Hidden only smDown ><Grid item md={4}>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}> 
               <CardMedia
                 component="img"
                 image="http://tcb-co.com/images/stories/virtuemart/product/resized/%D9%85%DA%A9%D9%85%D9%84%20%D8%B3%D9%88%D8%AE%D8%AA%20%D8%A7%DA%A9%D8%B3%DB%8C%D8%B1%20%D9%BE%D9%84%D8%A7%D8%B3%20%D9%85%D8%AF%D9%84%20%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87%20%D8%AD%D8%AC%D9%85%20250%20%D9%85%DB%8C%D9%84%DB%8C%20%D9%84%DB%8C%D8%AA%D8%B1_0x500.jpg"

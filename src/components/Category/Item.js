@@ -8,6 +8,7 @@ export default styled.div`
   background-color: #ebebeb;
   border: 1px solid #ebebeb;
   color: #fff;
-  margin: 0 15px;
+  border-radius: 15px;
+  margin: 0 10px;
   font-size: 1.5em;
 `;

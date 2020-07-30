@@ -56,7 +56,7 @@ export default function FanOfSth() {
       <div className={classes.root}>
         <Carousel breakPoints={breakPoints}>
         <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 className={classes.imageStyle}
                 component="img"
@@ -86,7 +86,7 @@ export default function FanOfSth() {
           </Item>
 
                  <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 className={classes.imageStyle}
                 component="img"
@@ -115,7 +115,7 @@ export default function FanOfSth() {
               </Card>
           </Item>
           <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 className={classes.imageStyle}
                 component="img"
@@ -144,7 +144,7 @@ export default function FanOfSth() {
           </Item>
 
                  <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia style={{}}
                 className={classes.imageStyle}
                 component="img"
@@ -174,7 +174,7 @@ export default function FanOfSth() {
               </Card>
           </Item>
                  <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 className={classes.imageStyle}
                 component="img"
@@ -202,7 +202,7 @@ export default function FanOfSth() {
               </Card>
           </Item>
                  <Item>
-            <Card>
+            <Card style={{borderRadius: 15}}>
               <CardMedia
                 className={classes.imageStyle}
                 component="img"

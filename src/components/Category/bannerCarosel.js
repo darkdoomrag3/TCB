@@ -46,7 +46,7 @@ export default function BannerCarosel() {
               alt=""
             />
           </Item>
-          <Item>
+          <Item >
             <CardMedia
               component="img"
               image="http://www.tcb-co.com/images/slider-2.jpg"

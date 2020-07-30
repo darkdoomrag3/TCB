@@ -54,7 +54,7 @@ export default function BestProductForYou() {
            justify="center"
           alignItems="center">
           <Grid item xs={12} sm={6} md={4}>
-          <Item style={{width: 400 ,height: 200,borderRadius:15,backgroundColor: "rgb(236, 14, 113)"}}>
+          <Item style={{width: 400 ,height: 200, borderRadius:15,backgroundColor: "rgb(236, 14, 113)"}}>
               {/* <CardContent>
                 <div className={classes.discount} style={{fontSize:"0.8rem", marginBottom:5, borderRadius: 5, paddingRight:5,paddingLeft:5}}>-10%</div>
                 <div className={classes.typography} style={{fontSize:"1.5rem", marginBottom:0,fontWeight: 600 }}>                &#1778;

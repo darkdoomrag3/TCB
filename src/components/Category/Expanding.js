@@ -18,7 +18,7 @@ export default function Expanding() {
             justify="center"
             alignItems="center">
             <Grid item md={2} className={classes.root}>
-                <Card>
+                <Card style={{borderRadius: 15}}>
                     <CardMedia 
                         component="img"
                         image=""
@@ -33,7 +33,7 @@ export default function Expanding() {
                 </Card>
             </Grid>
             <Grid item md={2} className={classes.root}>
-                <Card>
+                <Card style={{borderRadius: 15}}>
                     <CardMedia 
                         component="img"
                         image=""
@@ -48,7 +48,7 @@ export default function Expanding() {
                 </Card>
             </Grid>
             <Grid item md={2} className={classes.root}>
-                <Card>
+                <Card style={{borderRadius: 15}}>
                     <CardMedia 
                         component="img"
                         image=""
@@ -63,7 +63,7 @@ export default function Expanding() {
                 </Card>
             </Grid>
             <Grid item md={2} className={classes.root}>
-                <Card>
+                <Card style={{borderRadius: 15}}>
                     <CardMedia 
                         component="img"
                         image=""
@@ -78,7 +78,7 @@ export default function Expanding() {
                 </Card>
             </Grid>
             <Grid item md={2} className={classes.root}>
-                <Card>
+                <Card style={{borderRadius: 15}}>
                     <CardMedia 
                         component="img"
                         image=""
