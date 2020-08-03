@@ -65,8 +65,8 @@ export default function App() {
         <FanOfSth/>
         <BestProductForYou/>
         <PopularCategory/>
-        {/* <DiffrentCountries/> */}
-        {/* <Expanding/> */}
+        <DiffrentCountries/>
+        <Expanding/>
         <Footer/>
         <PrivateRoute exact path="/" component={HomePage} />
         <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />

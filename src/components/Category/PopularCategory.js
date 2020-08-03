@@ -5,7 +5,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Item from "./Item";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import { CardContent} from "@material-ui/core";
+import { CardContent, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +29,15 @@ export default function PopularCategory() {
     <div className={classes.root}>
 
 
-        <Grid direction="column"
->
-
+        <Grid direction="column">
+          <div className="header">
+          <div className="MuiGrid-root MuiGrid-container" style={{marginBottom: 10}}>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+            <a className={classes.typography} style={{marginLeft: 10,fontWeight: 500 }}
+            href="#">دسته بندی های محبوب</a>
+            </div>
+              </div>  
+          </div>
 
           <Grid container
             spacing={2}
@@ -39,7 +45,7 @@ export default function PopularCategory() {
             justify="center"
             alignItems="center">
 
-              <Grid item xs={2} sm={2} md={2} lg={2}>
+              <Grid item xs={2} sm={2} md={2} lg={2} >
                 <Item style={{ borderRadius: "50%",width: 100, height: 100 }}>
                   <CardMedia
                   style={{ borderRadius: "50%"}}                  

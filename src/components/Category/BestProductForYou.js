@@ -56,6 +56,14 @@ export default function BestProductForYou() {
   return (
     <React.Fragment>
       <div className={classes.root}>
+      <div className="MuiGrid-root MuiGrid-container" style={{marginBottom: 10}}>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+            <a className={classes.typography} style={{marginLeft: 10,fontWeight: 500 }}
+            href="#">
+            بهترین انتخاب ها برای شما
+            </a>
+            </div>
+              </div> 
         <Carousel breakPoints={breakPoints}>
           <Item style={{  borderRadius:25, height:250 ,backgroundColor: "rgb(255, 189, 193)"}}>
           <CardMedia

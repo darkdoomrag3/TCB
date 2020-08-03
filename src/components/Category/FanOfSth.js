@@ -54,6 +54,14 @@ export default function FanOfSth() {
   return (
     <React.Fragment>
       <div className={classes.root}>
+      <div className="MuiGrid-root MuiGrid-container" style={{marginBottom: 10}}>
+          <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
+            <a className={classes.typography} style={{marginLeft: 10,fontWeight: 500 }}
+            href="#">   
+            موضوع خاص         
+            </a>
+            </div>
+              </div> 
         <Carousel breakPoints={breakPoints}>
         <Item>
             <Card style={{borderRadius: 15}}>
