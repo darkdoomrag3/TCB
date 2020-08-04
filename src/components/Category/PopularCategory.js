@@ -46,46 +46,25 @@ export default function PopularCategory() {
             alignItems="center">
 
               <Grid item xs={2} sm={2} md={2} lg={2} >
-                <Item style={{ borderRadius: "50%",width: 100, height: 100 }}>
-                  <CardMedia
-                  style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                  />
+                <Item style={{borderRadius: "50%",width: 100, height: 100 }}>
+
                 </Item>
               </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-                <CardMedia
-                style={{ borderRadius: "50%"}}                  
-                  className={classes.grid}
-                  component="img"
-                  image=""
-                  alt=""
-                />
+
               </Item>
             </Grid>
             
           
           <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-              <CardMedia
-              style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                    />
               </Item>
+
             </Grid>
-            <Grid item xs={2} sm={2} md={2} lg={2}>
+            <Grid item xs={2} sm={2} md={2} lg={2} >
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-              <CardMedia
-              style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                    />
+
               </Item>
             </Grid>                    
           </Grid>
@@ -99,45 +78,24 @@ export default function PopularCategory() {
 
               <Grid item xs={2} sm={2} md={2} lg={2}>
                 <Item style={{ borderRadius: "50%",width: 100, height: 100 }}>
-                  <CardMedia
-                  style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                  />
+  
                 </Item>
               </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-                <CardMedia
-                style={{ borderRadius: "50%"}}                  
-                  className={classes.grid}
-                  component="img"
-                  image=""
-                  alt=""
-                />
+
               </Item>
             </Grid>
             
           
           <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-              <CardMedia
-              style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                    />
+
               </Item>
             </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-              <CardMedia
-              style={{ borderRadius: "50%"}}                  
-                    component="img"
-                    image=""
-                    alt=""
-                    />
+
               </Item>
             </Grid>                    
           </Grid>

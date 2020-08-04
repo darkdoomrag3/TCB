@@ -5,7 +5,7 @@ export default styled.div`
   align-item: center;
   height: 300px;
   width: 100%;
-  background-color: #ebebeb;
+  background-color: transparent;
   border: 1px solid #ebebeb;
   color: #fff;
   border-radius: 15px;
