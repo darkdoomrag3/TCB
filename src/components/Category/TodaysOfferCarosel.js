@@ -53,7 +53,9 @@ export default function TodayOfferCarosel() {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <p className={classes.typography} style={{textAlign:"center", fontWeight: 500}}>پیشنهادات روز</p>
+        <Typography className={classes.typography} style={{textAlign:"center", fontWeight: 500}}>
+        پیشنهادات روز
+        </Typography>
         <Carousel breakPoints={breakPoints}>
           <Item >
             <Card style={{borderRadius: 15}}>
@@ -77,10 +79,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -105,10 +105,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   کاسه نمد شفت ورودی مدل LF481Q1-1701030A1 مناسب برای خودروهای لیفان
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -133,9 +131,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  
                 </Typography>
               </CardContent>
               </Card>
@@ -160,10 +157,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -187,10 +182,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   کاسه نمد شفت ورودی مدل LF481Q1-1701030A1 مناسب برای خودروهای لیفان
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -214,9 +207,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  
                 </Typography>
               </CardContent>
               </Card>
@@ -241,10 +233,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -268,10 +258,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   کاسه نمد شفت ورودی مدل LF481Q1-1701030A1 مناسب برای خودروهای لیفان
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -295,9 +283,8 @@ export default function TodayOfferCarosel() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  
                 </Typography>
               </CardContent>
               </Card>

@@ -61,13 +61,13 @@ export default function App() {
         <BannerCarosel/>
         <TodayOfferCarosel/>
         <DealOfTheWeekCarosel/>
-        <MainCategory/>
+        <MainCategory/>      
         <FanOfSth/>
         <BestProductForYou/>
         <PopularCategory/>
         <DiffrentCountries/>
         <Expanding/>
-        <Footer/>
+        <Footer/> 
         <PrivateRoute exact path="/" component={HomePage} />
         <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
         <Route path="/login" component={PublicNavbar} />

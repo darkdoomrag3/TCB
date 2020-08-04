@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: 15,
   },
-  typography: { fontFamily: "Almarai", fontSize: "1rem" },
+  typography: { fontFamily: "Almarai", fontSize: "1rem", color:"black" },
   paper: {
     textAlign: "center",
     color: theme.palette.text.secondary,
@@ -29,7 +29,7 @@ export default function PopularCategory() {
     <div className={classes.root}>
 
 
-        <Grid direction="column">
+        <Grid >
           <div className="header">
           <div className="MuiGrid-root MuiGrid-container" style={{marginBottom: 10}}>
           <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true">
@@ -47,24 +47,35 @@ export default function PopularCategory() {
 
               <Grid item xs={2} sm={2} md={2} lg={2} >
                 <Item style={{borderRadius: "50%",width: 100, height: 100 }}>
-
+                <img style={{ marginTop:25 }}width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/2906/2906232.svg"
+               alt="technical"/>
                 </Item>
               </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-
+              <img style={{ marginTop:25 }}width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/1088/1088250.svg"
+               alt="article"/>
+              
               </Item>
             </Grid>
             
           
           <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
+              <img style={{ marginTop:25 }} width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/833/833539.svg"
+               alt="gallery"/>
               </Item>
 
             </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2} >
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
 
+              <img style={{ marginTop:25 }}width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/869/869636.svg"
+               alt="store"/>
               </Item>
             </Grid>                    
           </Grid>
@@ -78,24 +89,33 @@ export default function PopularCategory() {
 
               <Grid item xs={2} sm={2} md={2} lg={2}>
                 <Item style={{ borderRadius: "50%",width: 100, height: 100 }}>
-  
+                <img style={{ marginTop:25 }}width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/2384/2384719.svg"
+               alt="exhaust stuff"/>
                 </Item>
               </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
+              <img style={{ marginTop:25 }}width="50" height="50" 
+              src=" https://image.flaticon.com/icons/svg/586/586157.svg"
+               alt="straps"/>
 
               </Item>
             </Grid>
-            
           
           <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
+              <img style={{ marginTop:25 }}width="50" height="50" 
+              src="https://image.flaticon.com/icons/svg/2813/2813540.svg" 
+              alt="ball bearing"/>
 
               </Item>
             </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2}>
               <Item style={{ borderRadius: "50%", width: 100, height: 100 }}>
-
+                <img style={{ marginTop:25 }}width="50" height="50" 
+                src="https://image.flaticon.com/icons/svg/2906/2906193.svg" 
+                alt="oil"/>
               </Item>
             </Grid>                    
           </Grid>

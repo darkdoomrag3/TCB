@@ -33,18 +33,19 @@ export default function IndexIconMenu() {
     const classes  = useStyles();
 
     return (
-        <div container>
         <Grid item xs={12} sm={12} md={12} lg={12} spacing={3} container
                          direction="row-reverse"
                         justify="center"
-                         alignItems="space-between">
+                         alignItems="center">
         <Grid item xs={3} sm={3} md={3} className={classes.font}>
                              <IconButton aria-label="cart">
                                 <StyledBadge badgeContent={0} color="secondary">
                                  <ShoppingCartOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>سبد خرید</p></Hidden>
+                             <Hidden only={["md","sm","xs"]}>
+                                 <p>سبد خرید</p>
+                                 </Hidden>
                          </Grid>
 
                         <Grid item xs={3} sm={3} md={3} className={classes.font}>
@@ -53,7 +54,7 @@ export default function IndexIconMenu() {
                                      <Favoriate />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>موردعلاقه ها</p></Hidden>
+                             <Hidden only={["md","sm","xs"]}><p>موردعلاقه ها</p></Hidden>
                          </Grid>
 
                          <Grid item xs={3} sm={3} md={3} className={classes.font}>
@@ -62,7 +63,7 @@ export default function IndexIconMenu() {
                                      <PersonOutlineOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>ورود</p></Hidden></Link>
+                             <Hidden only={["md","sm","xs"]}><p>ورود</p></Hidden></Link>
                          </Grid>
 
                          <Grid item xs={3} sm={3} md={3} className={classes.font}>
@@ -71,10 +72,9 @@ export default function IndexIconMenu() {
                                  <NotificationsActiveOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only mdDown><p>اطلاعیه ها</p></Hidden>
+                             <Hidden only={["md","sm","xs"]}><p>اطلاعیه ها</p></Hidden>
                          </Grid>
 </Grid>
 
-        </div>
     )
 }

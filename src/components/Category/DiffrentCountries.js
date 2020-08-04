@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: 15,
   },
-  typography: { textAlign:"center",fontFamily: "Almarai", fontSize: "1rem" },
+  typography: { textAlign:"center",fontFamily: "Almarai", fontSize: "1rem", color:"black" },
   imageStyle:{
       opacity: 0.5,
       borderRadius:15,
@@ -63,8 +63,11 @@ export default function BestProductForYou() {
           <Item style={{height:200, borderRadius:15,backgroundColor: "rgb(236, 14, 113)"}}>
 
               <div className={classes.typography}>
-                <p>محصولات آمریکایی</p>
-                <p>بهترین محصولات از سراسر جهان</p>
+                <p style={{fontWeight:500}}>محصولات آمریکایی</p>
+                <p style={{fontWeight:500}}>بهترین محصولات از سراسر جهان</p>
+                <img style={{ marginTop:25 }} width="50" height="50" 
+                src="https://image.flaticon.com/icons/svg/323/323310.svg"
+                alt="usa" />
               </div>
           </Item>
             </Grid>
@@ -73,8 +76,11 @@ export default function BestProductForYou() {
           <Item style={{height:200, borderRadius:15, backgroundColor: "rgb(255, 230, 22)"}}>
 
               <div className={classes.typography}>
-                <p>محصولات اروپایی</p>
-                <p>بهترین محصولات از سراسر جهان</p>
+                <p style={{fontWeight:500}}>محصولات اروپایی</p>
+                <p style={{fontWeight:500}}>بهترین محصولات از سراسر جهان</p>
+                <img style={{ marginTop:25 }} width="50" height="50" 
+                src="https://image.flaticon.com/icons/svg/323/323344.svg"
+                alt="europe" />
               </div>
           </Item>
             </Grid>
@@ -83,8 +89,10 @@ export default function BestProductForYou() {
           <Item style={{height:200, borderRadius:15,backgroundColor: "rgb(0, 166, 66)"}}> 
 
               <div className={classes.typography}>
-                <p>محصولات چینی</p>
-                <p>بهترین محصولات از سراسر جهان</p>
+                <p style={{fontWeight:500}}>محصولات چینی</p>
+                <p style={{fontWeight:500}}>بهترین محصولات از سراسر جهان</p>
+                <img style={{ marginTop:25 }} width="50" height="50" src="https://image.flaticon.com/icons/svg/323/323363.svg"
+                alt="china" />
                 </div>
           </Item>
             </Grid>

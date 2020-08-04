@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: 15,
   },
-  typography: { fontFamily: "Almarai", fontSize: "1rem" },
+  typography: { fontFamily: "Almarai", fontSize: "1rem", color:"black" },
   imageStyle:{
     width:"100%",
                 height:120,
@@ -84,10 +84,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -114,10 +112,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   تسمه دینام دانگیل 4PK885 مناسب برای ریو و تیبا
-                 </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -143,9 +139,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  تسمه دینام دانگیل مدل 6PK 1575 مناسب برای پژو 206 تیپ 5                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  تسمه دینام دانگیل مدل 6PK 1575 مناسب برای پژو 206 تیپ 5                  
                 </Typography>
               </CardContent>
               </Card>
@@ -173,10 +168,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   بلبرینگ مدل 85-207 Ю15                 
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -202,9 +195,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  شلنگ 1/2 اینچ آکواکرفت مدل 850060 به همراه لوازم جانبی                 </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  شلنگ 1/2 اینچ آکواکرفت مدل 850060 به همراه لوازم جانبی                 
                 </Typography>
               </CardContent>
               </Card>
@@ -230,9 +222,8 @@ export default function FanOfSth() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  شلنگ 1/2 اینچ آکواکرفت مدل 850060 به همراه لوازم جانبی                 </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  شلنگ 1/2 اینچ آکواکرفت مدل 850060 به همراه لوازم جانبی                 
                 </Typography>
               </CardContent>
               </Card>

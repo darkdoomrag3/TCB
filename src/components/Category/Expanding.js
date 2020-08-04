@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
       },
-      typography: { fontFamily: "Almarai", fontSize: "1rem" },
+      typography: { fontFamily: "Almarai", fontSize: "1rem" , color:"black"},
       paddingCard: {
         padding: 3,
       },
@@ -87,17 +87,15 @@ export default function Expanding() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
           </Item>
           </Grid>
 
-          <Grid xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
+          <Grid item xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
               <Item >
             <Card style={{borderRadius: 15}}>
               <CardMedia
@@ -120,16 +118,14 @@ export default function Expanding() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
           </Item>
           </Grid>
-          <Grid xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
+          <Grid item xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
               <Item >
             <Card style={{borderRadius: 15}}>
               <CardMedia
@@ -152,16 +148,14 @@ export default function Expanding() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
           </Item>
           </Grid>
-          <Grid xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
+          <Grid item xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
               <Item >
             <Card style={{borderRadius: 15}}>
               <CardMedia
@@ -184,16 +178,14 @@ export default function Expanding() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
           </Item>
           </Grid>
-          <Grid xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
+          <Grid item xs={4} sm={3} md={2} lg={2} style={{margin:5}}>
               <Item>
             <Card style={{borderRadius: 15}}>
               <CardMedia
@@ -216,10 +208,8 @@ export default function Expanding() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>

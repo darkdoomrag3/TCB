@@ -54,31 +54,31 @@ export default function PublicCategory() {
       <MenuOutlinedIcon />
       </Button>
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>گالری</Hidden>
+        <Hidden only={["sm","xs"]}>گالری</Hidden>
       </Button>  
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>کاتالوگ</Hidden>
+        <Hidden only={["sm","xs"]}>کاتالوگ</Hidden>
       </Button>      
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>مقالات</Hidden>
+        <Hidden only={["sm","xs"]}>مقالات</Hidden>
       </Button>      
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>اطلاعات فنی</Hidden>
+        <Hidden only={["sm","xs"]}>اطلاعات فنی</Hidden>
       </Button>      
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>قطعات خودرو</Hidden>
+        <Hidden only={["sm","xs"]}>قطعات خودرو</Hidden>
       </Button>
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>تماس با ما</Hidden>
+        <Hidden only={["sm","xs"]}>تماس با ما</Hidden>
       </Button>
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>درباره ما</Hidden>
+        <Hidden only={["sm","xs"]}>درباره ما</Hidden>
       </Button>
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>فروشگاه</Hidden>
+        <Hidden only={["sm","xs"]}>فروشگاه</Hidden>
       </Button>
       <Button aria-controls="menu" className={classes.font} aria-haspopup="true" onClick={handleClick}>
-        <Hidden only smDown>صفحه اصلی</Hidden>
+        <Hidden only={["sm","xs"]}>صفحه اصلی</Hidden>
       </Button>
 </Toolbar>
 </AppBar>

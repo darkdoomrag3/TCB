@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: 15,
   },
-  typography: { fontFamily: "Almarai", fontSize: "1rem" },
+  typography: { fontFamily: "Almarai", fontSize: "1rem", color:"black" },
   paddingCard: {
     padding: 3,
   },
@@ -43,6 +43,13 @@ const useStyles = makeStyles((theme) => ({
   },
   starDefaultColor:{
     color:"#e5e5e5",
+  },
+  height:{
+    height: "700px",
+    minHeight: "400px",
+    '@media (min-width: 600px)': {
+      minHeight: "700px"
+    }
   }
 }));
 export default function Main() {
@@ -52,8 +59,8 @@ export default function Main() {
     <div className={classes.root}>
       <Grid  height={100} container spacing={3}>
 
-        <Grid item xs={12} sm={7} md={6} lg={4}>
-          <Item height="100%" style={{borderRadius: 15 ,backgroundColor: "rgb(209, 198, 235)"}}>
+        <Grid item  xs={12} sm={7} md={6} lg={4}>
+          <Item className={classes.height} style={{ borderRadius: 15 ,backgroundColor: "rgb(209, 198, 235)"}}>
           </Item>
         </Grid>
 
@@ -71,7 +78,7 @@ export default function Main() {
               </a>
               </div>
               </div>  
-          </Grid>
+            </Grid>
 
           <Grid container
         spacing={2}
@@ -98,9 +105,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  اورینگ سوزن انژکتور زمردیدک مدل S992_128 مناسب برای پراید                  
                 </Typography>
               </CardContent>
               </Card>
@@ -129,10 +135,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   مجموعه واشر گلویی اگزوز اورجینال مدل 405EWO مناسب برای پژو 405
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -158,10 +162,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   کاسه نمد شفت ورودی مدل LF481Q1-1701030A1 مناسب برای خودروهای لیفان
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -189,10 +191,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
                   کاسه نمد شفت ورودی مدل LF481Q1-1701030A1 مناسب برای خودروهای لیفان
-                  </p>
                 </Typography>
               </CardContent>
               </Card>
@@ -225,9 +225,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  مکمل سوخت خودرو لیکومولی مدل SPEED TEC PETROL حجم 250 میلی لیتر                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  مکمل سوخت خودرو لیکومولی مدل SPEED TEC PETROL حجم 250 میلی لیتر                  
                 </Typography>
               </CardContent>
               </Card>
@@ -255,9 +254,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  رادیاتور شوی وورث مدل 5861510250 حجم 250 میلی لیتر                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  رادیاتور شوی وورث مدل 5861510250 حجم 250 میلی لیتر                  
                 </Typography>
               </CardContent>
               </Card>
@@ -283,9 +281,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  مکمل سوخت اکسیر پلاس مدل پیشرفته حجم 250 میلی لیتر                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  مکمل سوخت اکسیر پلاس مدل پیشرفته حجم 250 میلی لیتر                  
                 </Typography>
               </CardContent>
               </Card>
@@ -312,9 +309,8 @@ export default function Main() {
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 <StarRateRoundedIcon className={classes.starDefaultColor}/>
                 </div>
-                <Typography>
-                  <p className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
-                  مکمل سوخت اکسیر پلاس مدل پیشرفته حجم 250 میلی لیتر                  </p>
+                <Typography className={classes.typography} style={{fontSize:"0.8rem", marginTop:2, marginBottom:0}}>
+                  مکمل سوخت اکسیر پلاس مدل پیشرفته حجم 250 میلی لیتر                  
                 </Typography>
               </CardContent>
               </Card>
