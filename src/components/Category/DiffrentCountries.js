@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin: 15,
   },
-  typography: { textAlign:"center",fontFamily: "Almarai", fontSize: "1rem", color:"black" },
+  typography: { marginTop:10,textAlign:"center",fontFamily: "Almarai", fontSize: "1rem", color:"black" },
   imageStyle:{
       opacity: 0.5,
       borderRadius:15,

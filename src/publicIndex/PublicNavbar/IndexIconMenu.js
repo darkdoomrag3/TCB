@@ -11,12 +11,14 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import Box  from "@material-ui/core/Box";
+import { Typography } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
     font:{
         fontFamily: "'Almarai', sans-serif",
-        fontSize:'1rem',
+        fontSize:'0.8rem',
+        textAlign:"center"
       },
 }));
 const StyledBadge = withStyles((theme) => ({
@@ -37,42 +39,49 @@ export default function IndexIconMenu() {
                          direction="row-reverse"
                         justify="center"
                          alignItems="center">
-        <Grid item xs={3} sm={3} md={3} className={classes.font}>
-                             <IconButton aria-label="cart">
-                                <StyledBadge badgeContent={0} color="secondary">
+        <Grid item xs={3} sm={3} md={3} >
+                             <IconButton aria-label="cart" style={{alignSelf:"center"}}>
+                                <StyledBadge badgeContent={1} color="secondary">
                                  <ShoppingCartOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only={["md","sm","xs"]}>
-                                 <p>سبد خرید</p>
+                             <Hidden only={["sm","xs"]}>
+                                 <Typography className={classes.font}>سبد خرید</Typography>
                                  </Hidden>
                          </Grid>
 
-                        <Grid item xs={3} sm={3} md={3} className={classes.font}>
-                            <IconButton aria-label="cart">
+                        <Grid item xs={3} sm={3} md={3}>
+                            <IconButton aria-label="favorite" style={{alignSelf:"center"}}>
                                  <StyledBadge badgeContent={0} color="secondary">
                                      <Favoriate />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only={["md","sm","xs"]}><p>موردعلاقه ها</p></Hidden>
+                             <Hidden only={["sm","xs"]}>
+                             <Typography  className={classes.font}>مورد علاقه ها</Typography>
+
+                             </Hidden>
                          </Grid>
 
-                         <Grid item xs={3} sm={3} md={3} className={classes.font}>
-                             <Link to="user"><IconButton aria-label="cart">
+                         <Grid item xs={3} sm={3} md={3} >
+                             <Link to="user"><IconButton aria-label="user" style={{alignSelf:"center"}}>
                                  <StyledBadge badgeContent={0} color="secondary">
                                      <PersonOutlineOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only={["md","sm","xs"]}><p>ورود</p></Hidden></Link>
+                             <Hidden only={["sm","xs"]}>
+                             <Typography  className={classes.font}>ورود</Typography>
+                                 </Hidden></Link>
                          </Grid>
 
-                         <Grid item xs={3} sm={3} md={3} className={classes.font}>
-                             <IconButton aria-label="cart">
-                                 <StyledBadge badgeContent={0} color="secondary">
+                         <Grid item xs={3} sm={3} md={3} >
+                             <IconButton aria-label="notification" style={{alignSelf:"center"}}>
+                                 <StyledBadge badgeContent={0} color="secondary" >
                                  <NotificationsActiveOutlinedIcon />
                                  </StyledBadge>
                              </IconButton>
-                             <Hidden only={["md","sm","xs"]}><p>اطلاعیه ها</p></Hidden>
+                             <Hidden only={["sm","xs"]}>
+                             <Typography  className={classes.font}>اطلاعیه ها</Typography>
+                             </Hidden>
                          </Grid>
 </Grid>
 

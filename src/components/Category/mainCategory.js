@@ -57,10 +57,25 @@ export default function Main() {
 
   return (    
     <div className={classes.root}>
-      <Grid  height={100} container spacing={3}>
+      <Grid container spacing={3}>
 
         <Grid item  xs={12} sm={7} md={6} lg={4}>
           <Item className={classes.height} style={{ borderRadius: 15 ,backgroundColor: "rgb(209, 198, 235)"}}>
+
+            <img style={{ marginTop:125 }} width="100" height="100" 
+            src="https://image.flaticon.com/icons/svg/3079/3079067.svg"
+            alt="belt" />
+            
+            <img style={{ marginTop:325 }} width="100" height="100" 
+            src="https://image.flaticon.com/icons/svg/2481/2481303.svg"
+            alt="help" />
+
+            <img style={{ marginTop:125 }} width="100" height="100" 
+            src="https://image.flaticon.com/icons/svg/950/950408.svg"
+            alt="oil" />
+            {/* <div className={classes.typography}>
+                <p style={{marginTop:525, fontWeight:500}}>همه محصولات روغنی</p>
+              </div> */}
           </Item>
         </Grid>
 
